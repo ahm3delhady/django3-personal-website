@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro">
+            <div class="container">
+                <div class="avatar" style="background-image:url({% static 'portfolio/img/avatars/avatar.jpg' %});">
+                </div>
+                <div class="about-me">
+                    <p>I'm <strong>Ahmed Elhady</strong>, Junior Software developer, I intersted in Computer science and
+                        Cyber security, I love to code since my childhood, I like to implement my own ideas.</p><a
+                        class="btn btn-outline-primary" role="button" href="{% url 'contact' %}"><strong>Grab me a
+                            Coffee</strong></a>
+                </div>
+            </div>
+            <footer></footer>
+        </section>
+    </main>
+
+{% endblock content %}

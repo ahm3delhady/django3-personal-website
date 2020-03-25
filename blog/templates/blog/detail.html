@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <div class="container">
+            <div class="heading">
+                <h2>{{ blog.title }}</h2>
+                <span>{{ blog.date|date:"M d, Y" }}</span>
+            </div>
+            <div class="content">
+                {{ blog.description }}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}
+
+

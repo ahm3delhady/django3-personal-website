@@ -1,0 +1,27 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <div class="container">
+            <div class="heading">
+                <h2>Recent Blogs</h2>
+            </div>
+            <div class="row">
+                {% for blog in blogs %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="{% url 'blog:detail' blog.id %}"><img class="card-img-top scale-on-hover"
+                                    src="{{ blog.image.url }}" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">{{blog}}</a></h6>
+                                <p class="text-muted card-text">{{ blog.description|force_escape|capfirst|truncatewords:"20" }}</p>
+                            </div>
+                        </div>
+                    </div>                
+                {% endfor %}
+    
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
